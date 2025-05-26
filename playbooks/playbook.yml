@@ -1,0 +1,9 @@
+---
+- hosts: local
+  gather_facts: no
+  roles:
+    - blacklist
+  vars:
+#  vars_files:
+#    - ./.passwd_vars.yml
+...

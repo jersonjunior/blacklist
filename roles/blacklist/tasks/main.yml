@@ -1,0 +1,4 @@
+---
+- name: blacklist
+  ansible.builtin.script: files/add_to_blacklist.py "{{ telefone }}" "{{ nome }}"
+
