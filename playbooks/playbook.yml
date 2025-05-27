@@ -3,7 +3,8 @@
   hosts: local
   become: yes        # se precisar de sudo
   tasks:
-    - name: Executar script add_to_blacklist.py localmente na máquina hospedeira
+    - name: Executar script localmente na hospedeira
       command: python3 /opt/scripts/add_to_blacklist.py
-
+      args:
+        executable: /bin/bash
 ...
