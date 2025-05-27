@@ -1,9 +1,9 @@
 ---
-- hosts: local
-  gather_facts: no
-  roles:
-    - blacklist
-  vars:
-#  vars_files:
-#    - ./.passwd_vars.yml
+- name: Executar script na máquina hospedeira
+  hosts: debian-host
+  become: yes        # se precisar de sudo
+  tasks:
+    - name: Executar script add_to_blacklist.py localmente na máquina hospedeira
+      command: python3 /opt/scripts/add_to_blacklist.py
+
 ...
