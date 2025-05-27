@@ -1,10 +1,10 @@
 ---
-- name: Executar script na máquina hospedeira
-  hosts: local
-  become: yes        # se precisar de sudo
-  tasks:
-    - name: Executar script localmente na hospedeira
-      command: python3 /opt/scripts/add_to_blacklist.py
-      args:
-        executable: /bin/bash
+- hosts: local
+  gather_facts: no
+  roles:
+    - blacklist
+  vars:
+#  vars_files:
+#    - ./.passwd_vars.yml
 ...
+

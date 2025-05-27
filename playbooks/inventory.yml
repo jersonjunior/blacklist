@@ -1,9 +1,0 @@
-all:
-  hosts:
-    local:
-      ansible_host: 192.168.100.31
-      ansible_user: jersonjunior
-      ansible_become: true
-      ansible_become_method: sudo
-      ansible_sudo_executable: /usr/bin/sudo
-
