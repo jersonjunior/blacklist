@@ -1,6 +1,6 @@
 ---
 - name: Executar script na máquina hospedeira
-  hosts: debian-host
+  hosts: local
   become: yes        # se precisar de sudo
   tasks:
     - name: Executar script add_to_blacklist.py localmente na máquina hospedeira
